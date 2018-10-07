@@ -10,8 +10,8 @@ class Typing extends React.Component{
     render(){
         return(
             <React.Fragment>
-                {this.props.lorem.split('').map((item)=>{
-                    return(<BlockAlphabet>{item}</BlockAlphabet>);
+                {this.props.lorem.split('').map((item,index)=>{
+                    return(<BlockAlphabet position={index}>{item}</BlockAlphabet>);
                 })}
                 
             </React.Fragment>

@@ -10,3 +10,12 @@ export function loremIpsum(state="",action){
         default :return state;
     }
 }
+
+export function cursor(state=0,action){
+    switch(action.type){
+        case 'INC_CURSOR':{
+            return state+1;
+        }
+        default : return state;
+    }
+}
