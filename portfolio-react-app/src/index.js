@@ -7,10 +7,10 @@ import { Provider } from 'react-redux';
 import { combineReducers, createStore,applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {sagaReducer} from './sagas/saga.js';
-import {loremIpsum,cursor} from './components/reducers/reducer.js';
-const reducer=combineReducers({lorem:loremIpsum,cursor:cursor});
+import {loremIpsum,cursor,keyDown} from './components/reducers/reducer.js';
+const reducer=combineReducers({lorem:loremIpsum,cursor:cursor,keyPressed:keyDown});
 const sagaMiddleware=createSagaMiddleware();
-const store=createStore(reducer,applyMiddleware(sagaMiddleware));
+const store=createStore(reducer);
 //sagaMiddleware.run(sagaReducer);
 
 ReactDOM.render(

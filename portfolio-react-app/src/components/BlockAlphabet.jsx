@@ -8,63 +8,60 @@ class BlockAlphabet extends React.Component {
             style: style_normal
         }
     }
-    componentDidMount() {
-        if (this.props.cursor === this.props.position) {
+    componentWillReceiveProps(props){
+        if(props.position<=props.cursor){
+        if (props.cursor === props.position) {
             this.setState({ style: style_zoom })
         }
-        document.addEventListener('keydown', (e) => {
-           
-            if(e.key===this.props.children && this.props.cursor === this.props.position){
-                this.props.dispatch({type:'INC_CURSOR'});
-                this.setState({style:style_sucess})
-            }
-            if (this.props.cursor === this.props.position) {
-                this.setState({ style: style_zoom })
-            }
-        })
+        if (props.keyPressed === props.children && props.cursor-1 === props.position) {
+            this.setState({ style: style_sucess })
+        }
+       
     }
+    }
+   
     render() {
         return (
             <React.Fragment>
-                <div style={this.state.style}>{this.props.children}</div>
+                <span style={this.state.style}>{this.props.children}</span>
             </React.Fragment>
         );
     }
 }
 const style_normal = {
     "display": "inline-block",
-    "height": "50px",
-    "width": "30px",
-    "border": "solid",
-    "border-width": "1px",
     "margin": "2px",
-    
+    "font-size": "40px"
 }
 
 const style_zoom = {
     "display": "inline-block",
-    "height": "80px",
-    "width": "50px",
-    "border": "solid",
-    "border-width": "1px",
+    "font-size": "60px",
+    "border-bottom": "solid",
+    "border-width": "3px",
     "margin": "2px",
-    
+    "transition": "font-size 30ms ease-in",
+    "color":"black"
 }
 
 const style_sucess = {
     "display": "inline-block",
-    "height": "50px",
-    "width": "30px",
-    "border": "solid",
-    "border-width": "1px",
     "margin": "2px",
-    "background-color":"green"
+    "color": "green",
+    "font-size": "40px"
 }
 
+const style_fail = {
+    "display": "inline-block",
+    "margin": "2px",
+    "color": "red",
+    "font-size": "40px"
+}
 
 function mapStateToProps(state, ownProps) {
     return ({
-        cursor: state.cursor
+        cursor: state.cursor,
+        keyPressed: state.keyPressed
     })
 }
 export default connect(mapStateToProps)(BlockAlphabet);

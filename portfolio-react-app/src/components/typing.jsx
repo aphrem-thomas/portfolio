@@ -6,6 +6,10 @@ import BlockAlphabet from './BlockAlphabet.jsx';
 class Typing extends React.Component{
     componentDidMount(){
         this.props.dispatch({type:'LOREM'});
+        window.addEventListener('keydown',(e)=>{
+            this.props.dispatch({type:'KEY_DOWN',payload:e.key});
+            this.props.dispatch({type:'INC_CURSOR'});
+        })
     }
     render(){
         return(
