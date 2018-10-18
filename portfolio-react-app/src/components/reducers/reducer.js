@@ -1,10 +1,10 @@
 import lorem from 'lorem-ipsum';
 
-export function loremIpsum(state='therek;lsdfjlasdjfa;sldfj;asldfjdlfa;sldfjdsl;fjdslfja;sd',action){
-    //console.log("inside lorem ipsum reducer");
+export function loremIpsum(state='welcome',action){
+    console.log("inside lorem ipsum reducer");
     switch(action.type){
         case 'LOREM':{
-            // let ipsum=lorem();
+            //let ipsum=lorem();
             return state;
         }
         default :return state;
@@ -12,6 +12,7 @@ export function loremIpsum(state='therek;lsdfjlasdjfa;sldfj;asldfjdlfa;sldfjdsl;
 }
 
 export function cursor(state=0,action){
+    console.log("cursor is at: "+state)
     switch(action.type){
         case 'INC_CURSOR':{
             return state+1;
@@ -23,7 +24,7 @@ export function cursor(state=0,action){
 export function keyDown(state=null,action){
     switch(action.type){
         case 'KEY_DOWN':{
-            //console.log("key typed: "+action.payload);
+            console.log("key typed: "+action.payload);
             return action.payload;
         }
         default : return state;

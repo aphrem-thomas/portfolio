@@ -8,18 +8,26 @@ class BlockAlphabet extends React.Component {
             style: style_normal
         }
     }
-    componentWillReceiveProps(props){
-        if(props.position<=props.cursor){
-        if (props.cursor === props.position) {
+    componentDidMount(){
+        if (this.props.cursor === this.props.position) {
             this.setState({ style: style_zoom })
         }
-        if (props.keyPressed === props.children && props.cursor-1 === props.position) {
-            this.setState({ style: style_sucess })
+    }
+    componentWillReceiveProps(props) {
+        if (props.position <= props.cursor) {
+            if (props.cursor === props.position) {
+                this.setState({ style: style_zoom })
+            }
+            else if (props.keyPressed === props.children && props.cursor - 1 === props.position) {
+                this.setState({ style: style_sucess })
+            }
+            else{
+                this.setState({style:style_fail});
+            }
+
         }
-       
     }
-    }
-   
+
     render() {
         return (
             <React.Fragment>
@@ -41,7 +49,7 @@ const style_zoom = {
     "border-width": "3px",
     "margin": "2px",
     "transition": "font-size 30ms ease-in",
-    "color":"black"
+    "color": "black"
 }
 
 const style_sucess = {

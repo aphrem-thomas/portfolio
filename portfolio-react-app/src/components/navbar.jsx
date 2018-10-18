@@ -27,6 +27,9 @@ class NavBar extends React.Component {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/typing">Typing Game</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/triangle">Triangle</Link>
+                            </li>
                         </ul>
                     </div>
                 </nav>
