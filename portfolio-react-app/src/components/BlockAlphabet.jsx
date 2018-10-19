@@ -14,7 +14,7 @@ class BlockAlphabet extends React.Component {
         }
     }
     componentWillReceiveProps(props) {
-        if (props.position <= props.cursor) {
+        if (props.position == props.cursor) {
             if (props.cursor === props.position) {
                 this.setState({ style: style_zoom })
             }
@@ -31,7 +31,7 @@ class BlockAlphabet extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <span style={this.state.style}>{this.props.children}</span>
+                <div style={this.state.style}>{this.props.children}</div>
             </React.Fragment>
         );
     }
@@ -45,7 +45,6 @@ const style_normal = {
 const style_zoom = {
     "display": "inline-block",
     "font-size": "60px",
-    "border-bottom": "solid",
     "border-width": "3px",
     "margin": "2px",
     "transition": "font-size 30ms ease-in",
