@@ -46,13 +46,23 @@ class DataInput extends React.Component {
                             <input id="side-a" type="text"  />
                         </label>
                     </fieldset>
-
+                    {this.state.a_state=="ts-error"?
+                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                         <dt>Error: Must enter numbers greater than 0</dt>
+                     </dl>:null
+                    }
+                   
                     <fieldset>
                         <label className={this.state.b_state}>
                             <span>Side B</span>
                             <input id="side-b" type="text" />
                         </label>
                     </fieldset>
+                    {this.state.b_state=="ts-error"?
+                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                          <dt>Error: Must enter numbers greater than 0</dt>
+                     </dl>:null
+                    }
 
                     <fieldset >
                         <label className={this.state.c_state}>
@@ -60,6 +70,11 @@ class DataInput extends React.Component {
                             <input id="side-c" type="text" />
                         </label>
                     </fieldset>
+                    {this.state.c_state=="ts-error"?
+                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                         <dt>Error: Must enter numbers greater than 0</dt>
+                     </dl>:null
+                    }
 
                 </form>
 

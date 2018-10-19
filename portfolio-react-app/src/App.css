@@ -52,7 +52,9 @@
   margin: 50px;
   padding:50px;
 }
-
+.erroroutput{
+  margin: 0;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
