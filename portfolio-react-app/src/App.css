@@ -43,9 +43,10 @@
   display:inline;
 }
 .display-section{
-  width:350px;
+  height: 100%;
   margin: 50px;
   padding:50px;
+ 
 }
 .dataform{
   width:350px;
@@ -54,6 +55,10 @@
 }
 .erroroutput{
   margin: 0;
+}
+
+.triangle-pic{
+  width: 50%
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

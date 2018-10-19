@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class DataInput extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={a_state:null,b_state:null,c_state:null}
+        this.state = { a_state: null, b_state: null, c_state: null }
     }
-   
-    onSubmit(e) {
+
+    onSubmit(e) { //form validation is done here, also if the inputs are valid it is updated in the redux store
         e.preventDefault();
         let a = parseFloat(document.getElementById("side-a").value);
         let b = parseFloat(document.getElementById("side-b").value);
@@ -17,18 +17,18 @@ class DataInput extends React.Component {
 
             this.props.addDimension(a, b, c);
         }
-        if(a<=0||Number.isNaN(a))
-            this.setState({a_state:'ts-error'});
+        if (a <= 0 || Number.isNaN(a))
+            this.setState({ a_state: 'ts-error' });
         else
-            this.setState({a_state:null});
-        if(b<=0||Number.isNaN(b))
-            this.setState({b_state:"ts-error"});
+            this.setState({ a_state: null });
+        if (b <= 0 || Number.isNaN(b))
+            this.setState({ b_state: "ts-error" });
         else
-            this.setState({b_state:null});
-        if(c<=0||Number.isNaN(c))
-            this.setState({c_state:"ts-error"});
+            this.setState({ b_state: null });
+        if (c <= 0 || Number.isNaN(c))
+            this.setState({ c_state: "ts-error" });
         else
-            this.setState({c_state:null});
+            this.setState({ c_state: null });
 
 
 
@@ -41,27 +41,27 @@ class DataInput extends React.Component {
             <div className="dataform">
                 <form data-ts="Form">
                     <fieldset>
-                        <label  className={this.state.a_state}>
+                        <label className={this.state.a_state}>
                             <span>Side A</span>
-                            <input id="side-a" type="text"  />
+                            <input id="side-a" type="text" />
                         </label>
                     </fieldset>
-                    {this.state.a_state=="ts-error"?
-                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
-                         <dt>Error: Must enter numbers greater than 0</dt>
-                     </dl>:null
+                    {this.state.a_state == "ts-error" ?
+                        <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                            <dt>Error: Must enter numbers greater than 0</dt>
+                        </dl> : null
                     }
-                   
+
                     <fieldset>
                         <label className={this.state.b_state}>
                             <span>Side B</span>
                             <input id="side-b" type="text" />
                         </label>
                     </fieldset>
-                    {this.state.b_state=="ts-error"?
-                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
-                          <dt>Error: Must enter numbers greater than 0</dt>
-                     </dl>:null
+                    {this.state.b_state == "ts-error" ?
+                        <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                            <dt>Error: Must enter numbers greater than 0</dt>
+                        </dl> : null
                     }
 
                     <fieldset >
@@ -70,10 +70,10 @@ class DataInput extends React.Component {
                             <input id="side-c" type="text" />
                         </label>
                     </fieldset>
-                    {this.state.c_state=="ts-error"?
-                         <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
-                         <dt>Error: Must enter numbers greater than 0</dt>
-                     </dl>:null
+                    {this.state.c_state == "ts-error" ?
+                        <dl className="ts-errors erroroutput" ng-show="form.poref.$invalid">
+                            <dt>Error: Must enter numbers greater than 0</dt>
+                        </dl> : null
                     }
 
                 </form>
