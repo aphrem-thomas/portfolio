@@ -42,8 +42,8 @@ class DataInput extends React.Component {
                 <form data-ts="Form">
                     <fieldset>
                         <label className={this.state.a_state}>
-                            <span>Side A</span>
-                            <input id="side-a" type="text" />
+                            <span>Side a</span>
+                            <input id="side-a" type="number" />
                         </label>
                     </fieldset>
                     {this.state.a_state == "ts-error" ?
@@ -54,8 +54,8 @@ class DataInput extends React.Component {
 
                     <fieldset>
                         <label className={this.state.b_state}>
-                            <span>Side B</span>
-                            <input id="side-b" type="text" />
+                            <span>Side b</span>
+                            <input id="side-b" type="number" />
                         </label>
                     </fieldset>
                     {this.state.b_state == "ts-error" ?
@@ -66,8 +66,8 @@ class DataInput extends React.Component {
 
                     <fieldset >
                         <label className={this.state.c_state}>
-                            <span>Side C</span>
-                            <input id="side-c" type="text" />
+                            <span>Side c</span>
+                            <input id="side-c" type="number" />
                         </label>
                     </fieldset>
                     {this.state.c_state == "ts-error" ?

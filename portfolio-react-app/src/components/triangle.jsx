@@ -8,17 +8,16 @@ class Triangle extends React.Component {
     render() {
         return (
             <div className='triangle'>
-            <div className="triangle-head">
-            <h1>Please enter the length of sides of triangle</h1>
-            </div>
-           
-                <div className="row">
-                    <div className="col-6-lg col-12-sm"><DataInput/></div>
-                    <div className="col-6=lg col-12-sm"><TriangleDisplay/></div>
+                <div className="triangle-head">
+                    <h1>Please enter the length of sides of triangle</h1>
                 </div>
+                <div className="content">
                 
+                    <div className="inputSides"><DataInput/></div>
+                    <div className="displayTriangle"><TriangleDisplay/></div>
                 
-            
+                </div>
+               
             </div>
         );
     }

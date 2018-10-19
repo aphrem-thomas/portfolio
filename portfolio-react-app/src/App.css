@@ -40,16 +40,20 @@
   
 }
 .inputSides{
-  width:100%;
+  flex:1;
 }
 .displayTriangle{
-  width:100%;
+  display: flex;
+  flex:1;
+  padding:0;
+  border:dotted;
+  border-width: 1px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center
 }
-.display-section{
-  height: 100%;
-  margin: 50px;
-  padding:50px;
- 
+.output-text{
+  transition: font-size 30ms ease-in 1s;
 }
 .dataform{
   width:350px;
@@ -64,8 +68,17 @@
   width: 50%
 }
 
-
-
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+.output{
+  border:solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

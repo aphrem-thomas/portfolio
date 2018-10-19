@@ -5,28 +5,42 @@ class BlockAlphabet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            style: style_normal
+            style: style_normal,passed:false
         }
     }
     componentDidMount(){
         if (this.props.cursor === this.props.position) {
             this.setState({ style: style_zoom })
         }
+        if(!this.state.passed){
+        window.addEventListener('keydown',(e)=>{
+            //this.props.dispatch({type:'KEY_DOWN',payload:e.key});
+            if(this.props.children===e.key&& this.props.cursor===this.props.position){
+                this.setState({style:style_sucess})
+                this.setState({passed:true});
+            }
+            if(this.props.children!==e.key&& this.props.cursor===this.props.position){
+                this.setState({style:style_fail})
+                this.setState({passed:true});
+            }
+            this.props.dispatch({type:'INC_CURSOR'});
+        })
     }
-    componentWillReceiveProps(props) {
-        if (props.position == props.cursor) {
-            if (props.cursor === props.position) {
-                this.setState({ style: style_zoom })
-            }
-            else if (props.keyPressed === props.children && props.cursor - 1 === props.position) {
-                this.setState({ style: style_sucess })
-            }
-            else{
-                this.setState({style:style_fail});
-            }
+    }
+    // componentWillReceiveProps(props) {
+    //     if (props.position == props.cursor) {
+    //         if (props.cursor === props.position) {
+    //             this.setState({ style: style_zoom })
+    //         }
+    //         else if (props.keyPressed === props.children && props.cursor - 1 === props.position) {
+    //             this.setState({ style: style_sucess })
+    //         }
+    //         else{
+    //             this.setState({style:style_fail});
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
     render() {
         return (
