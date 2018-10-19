@@ -15,7 +15,7 @@ class NavBar extends React.Component {
                             <li className="nav-item active">
                                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/contact">Contact</Link>
                             </li>
                             <li className="nav-item">
@@ -23,7 +23,7 @@ class NavBar extends React.Component {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">Resume</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/typing">Typing Game</Link>
                             </li>

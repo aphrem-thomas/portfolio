@@ -9,7 +9,7 @@ class Triangle extends React.Component {
         return (
             <div className='triangle'>
                 <div className="triangle-head">
-                    <h1>Please enter the length of sides of triangle</h1>
+                    <h1>Triangle Classifier</h1>
                 </div>
                 <div className="content">
                 

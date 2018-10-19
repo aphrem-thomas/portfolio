@@ -12,18 +12,20 @@ class BlockAlphabet extends React.Component {
         if (this.props.cursor === this.props.position) {
             this.setState({ style: style_zoom })
         }
-        if(!this.state.passed){
+        if(!this.state.passed&&this.props.position>=this.props.cursor){
+            console.log("cursor :"+this.props.cusor+this.state.passed)
         window.addEventListener('keydown',(e)=>{
-            //this.props.dispatch({type:'KEY_DOWN',payload:e.key});
             if(this.props.children===e.key&& this.props.cursor===this.props.position){
                 this.setState({style:style_sucess})
                 this.setState({passed:true});
+                this.props.dispatch({type:'INC_CURSOR'});
             }
             if(this.props.children!==e.key&& this.props.cursor===this.props.position){
                 this.setState({style:style_fail})
                 this.setState({passed:true});
+                this.props.dispatch({type:'INC_CURSOR'});
             }
-            this.props.dispatch({type:'INC_CURSOR'});
+            
         })
     }
     }
