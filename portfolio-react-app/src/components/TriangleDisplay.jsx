@@ -10,14 +10,14 @@ import oops from '../images/oops.png';
 class TriangleDisplay extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { triangle: "Please enter the length of sides of triangle in the text boxes", image: Triangle,textStyle:textStyle1 }
+        this.state = { triangle: "Please enter the length of sides of triangle in the text boxes", image: Triangle, textStyle: textStyle1 }
+
     }
     componentWillReceiveProps(props) { //whenever props is received then this code is executed
         let a = props.dimension.a;
         let b = props.dimension.b;
         let c = props.dimension.c;
-       
-        this.setState({textStyle:textStyle2});
+
         if (a + b <= c || a + c <= b || b + c <= a) {
             this.setState({ triangle: "Its a non-valid triangle" });
             this.setState({ image: oops })
@@ -34,17 +34,16 @@ class TriangleDisplay extends React.Component {
             this.setState({ triangle: "Its a scalene triangle" });
             this.setState({ image: scaTriangle })
         }
-        this.setState({textStyle:textStyle1});
+        this.setState({ textStyle: textStyle1 });
     }
     render() {
         return (
-           
-                <div>
-                    <h1 className="output-text" style={this.state.textStyle}>{this.state.triangle}</h1>
-                    <img className="triangle-display" src={this.state.image} style={{ "height": "200px", "width": "auto", "object-fit": "contain" }} />
-                    {/* <a class="btn btn-primary btn-lg" href="#" role="button">Area?</a> */}
+            <div>
+                <h1 className="output-text" style={this.state.textStyle}>{this.state.triangle}</h1>
+                <img className="triangle-display" src={this.state.image} style={{ "height": "200px", "width": "auto", "object-fit": "contain" }} />
 
-                </div>
+            </div>
+
         );
     }
 }
@@ -56,10 +55,10 @@ function mapStateToProps(state, ownProps) {
 export default connect(mapStateToProps)(TriangleDisplay); //used to connect the component with store
 
 
-const textStyle1={
+const textStyle1 = {
     "font-size": "30px",
 }
 
-const textStyle2={
+const textStyle2 = {
     "font-size": "40px",
 }

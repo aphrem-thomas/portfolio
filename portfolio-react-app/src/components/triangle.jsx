@@ -3,7 +3,7 @@ import { Router, Switch } from 'react-router';
 import NavBar from './navbar.jsx';
 import Content from './content.jsx';
 import DataInput from './DataInput.jsx';
-import TriangleDisplay from './TriangleDisplay.jsx';
+import TriangleDisplay from './TriangleDisplay.jsx'; //DataInput and TriangleDisplay are the two componets used here
 class Triangle extends React.Component {
     render() {
         return (
@@ -13,7 +13,7 @@ class Triangle extends React.Component {
                 </div>
                 <div className="content">
                 
-                    <div className="inputSides"><DataInput/></div>
+                    <div className="inputSides"><DataInput/></div>    
                     <div className="displayTriangle"><TriangleDisplay/></div>
                 
                 </div>

@@ -9,12 +9,12 @@ class Typing extends React.Component{
     }
     render(){
         return(
-            <React.Fragment>
+            <div className="typing-word">
                 {this.props.lorem.split('').map((item,index)=>{
                     return(<BlockAlphabet position={index}>{item}</BlockAlphabet>);
                 })}
                 
-            </React.Fragment>
+            </div>
         );
     }
 }
