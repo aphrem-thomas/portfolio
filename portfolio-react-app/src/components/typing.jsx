@@ -8,7 +8,7 @@ class Typing extends React.Component{
         this.props.dispatch({type:'LOREM'});
         window.addEventListener('keydown',(e)=>{
             this.props.dispatch({type:'KEY_DOWN',payload:e.key});
-            this.props.dispatch({type:'INC_CURSOR'});
+           // this.props.dispatch({type:'INC_CURSOR'});
         })
     }
     render(){

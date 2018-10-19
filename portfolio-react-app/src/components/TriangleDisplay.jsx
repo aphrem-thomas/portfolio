@@ -37,14 +37,14 @@ class TriangleDisplay extends React.Component {
     render() {
         return (
             <div className="display-section">
-                <div class="jumbotron">
+                <div class="jumbotron output">
                     <h1 class="display-4">{this.state.triangle}</h1>
                     <p class="lead"></p>
                     <hr class="my-4"/>
-                        <p class="lead">
-                            <img src={this.state.image} style={{"height":"200px","width":"200px"}}/>
+                        
+                            <img className="triangle-display" src={this.state.image} style={{"height":"200px","width":"auto","object-fit":"contain"}}/>
                             {/* <a class="btn btn-primary btn-lg" href="#" role="button">Area?</a> */}
-                        </p>
+     
                     </div>
                 </div>
                 );
