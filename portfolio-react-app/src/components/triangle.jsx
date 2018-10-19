@@ -9,8 +9,14 @@ class Triangle extends React.Component {
         return (
             <div className='triangle'>
             <div className="triangle-head"></div>
-            <DataInput/>
-            <TriangleDisplay/>
+            <div className="content container">
+                <div className="row">
+                    <div className="col-6"><DataInput/></div>
+                    <div className="col-6"><TriangleDisplay/></div>
+                </div>
+                
+                
+            </div>
             </div>
         );
     }

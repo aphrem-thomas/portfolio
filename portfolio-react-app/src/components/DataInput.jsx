@@ -1,16 +1,36 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 class DataInput extends React.Component {
-    onSubmit(e){
+    constructor(props){
+        super(props);
+        this.state={a_state:null,b_state:null,c_state:null}
+    }
+   
+    onSubmit(e) {
         e.preventDefault();
-        let a=parseInt(document.getElementById("side-a").value);
-        let b=parseInt(document.getElementById("side-b").value);
-        let c=parseInt(document.getElementById("side-c").value);
+        let a = parseFloat(document.getElementById("side-a").value);
+        let b = parseFloat(document.getElementById("side-b").value);
+        let c = parseFloat(document.getElementById("side-c").value);
+        console.log(a);
+        if (a != null && a > 0 && b != null && b > 0 && c != null && c > 0) {
 
-        if( a!=null && a>0 && b!=null && b>0 && c!=null && c>0){
-            this.props.addDimension(a,b,c);
+            this.props.addDimension(a, b, c);
         }
+        if(a<=0||Number.isNaN(a))
+            this.setState({a_state:'ts-error'});
+        else
+            this.setState({a_state:null});
+        if(b<=0||Number.isNaN(b))
+            this.setState({b_state:"ts-error"});
+        else
+            this.setState({b_state:null});
+        if(c<=0||Number.isNaN(c))
+            this.setState({c_state:"ts-error"});
+        else
+            this.setState({c_state:null});
+
+
 
     }
 
@@ -21,21 +41,21 @@ class DataInput extends React.Component {
             <div className="dataform">
                 <form data-ts="Form">
                     <fieldset>
-                        <label>
+                        <label  className={this.state.a_state}>
                             <span>Side A</span>
-                            <input id="side-a" type="text" />
+                            <input id="side-a" type="text"  />
                         </label>
                     </fieldset>
 
                     <fieldset>
-                        <label>
+                        <label className={this.state.b_state}>
                             <span>Side B</span>
                             <input id="side-b" type="text" />
                         </label>
                     </fieldset>
 
-                    <fieldset>
-                        <label>
+                    <fieldset >
+                        <label className={this.state.c_state}>
                             <span>Side C</span>
                             <input id="side-c" type="text" />
                         </label>
@@ -44,30 +64,30 @@ class DataInput extends React.Component {
                 </form>
 
                 <button data-ts="Button" class="ts-primary" onClick={this.onSubmit.bind(this)}>
-                    <span style={{"display":"none"}}>Button Text</span>
+                    <span style={{ "display": "none" }}>Button Text</span>
                     <i class="ts-icon-arrowright"></i>
                 </button>
-                <h2>{this.props.dimension.a}</h2>
+
             </div>
         );
     }
 }
 
-function mapStateToProps(state,ownProps){
-    return({
-        dimension:state.Triangle
+function mapStateToProps(state, ownProps) {
+    return ({
+        dimension: state.Triangle
     })
 }
 
-function mapDispatchToProps(dispatch){
-    return(
+function mapDispatchToProps(dispatch) {
+    return (
         {
-            addDimension: (a,b,c) => {
-                let data={"a":a,"b":b,"c":c}
-                dispatch({type:"DIMENSIONS",payload:data})
+            addDimension: (a, b, c) => {
+                let data = { "a": a, "b": b, "c": c }
+                dispatch({ type: "DIMENSIONS", payload: data })
+            }
         }
-    }
     );
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(DataInput);
+export default connect(mapStateToProps, mapDispatchToProps)(DataInput);
