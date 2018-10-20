@@ -6,9 +6,9 @@ class Intro extends React.Component{
         return(
             <div className="container">
             <div className="introbox jumbotron">
-            <div className="intro-text">
+            <span className="intro-text">
                 Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Java, JavaScript, React.js, React Native, and Adobe Photoshop. Strong engineering professional with a Master of Technology (MTech) focused in Computer Science from College of Engineering, Trivandrum.            
-            </div>         
+            </span>         
             <img src={aphrem1} className="profilepic"/>   
             </div>
 

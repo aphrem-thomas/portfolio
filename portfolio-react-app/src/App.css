@@ -39,14 +39,19 @@
   width: 350px;
   object-fit: cover;
   border-radius: 50%;
-  
+
 }
 .intro-text{
+  position: relative;
   flex:2;
   justify-content: center;
   align-items: center;
-  text-align: justify;
-
+  text-align: left;
+  font-size: 20px;
+  animation: moveabit 1s ease-in;
+  animation-fill-mode: forwards;
+  padding: 10px;
+  padding-right: 50px;
 }
 .inputSides{
   flex:1;
@@ -61,10 +66,12 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
+  
 }
 .output-text{
-  transition: font-size 30ms ease-in 1s;
-  text-align: center
+  animation: moveabit .6s ease-in;
+  animation-fill-mode: forwards;
+  padding: 3px;
 }
 .dataform{
   width:350px;
@@ -103,4 +110,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes moveabit{
+  from{transform: translate(-20px);opacity: 0;}
+  to{transform: translateX(0px);opacity: 1;}
 }
