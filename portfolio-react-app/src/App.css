@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
 .App {
   text-align: center;
   font-family: 'Merriweather','Open Sans';
@@ -25,7 +27,7 @@
 }
 
 .mainDiv{
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .introbox{

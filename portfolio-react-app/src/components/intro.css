@@ -1,0 +1,44 @@
+.wrapper{
+    display: flex;
+}
+
+.profilePhoto{
+    flex:1;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.profilePhoto img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.intro{
+    flex: 1 1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster';
+}
+
+.intro-wrapper{
+
+}
+
+.hi{
+    font-size: 100px;
+}
+
+.hi::after{
+    content: "it's";
+    position: relative;
+    font-size: 63px;
+    left: 24px;
+}
+
+.aphremName{
+    font-family: 'Caveat Brush','Open Sans';
+    font-size: 135px;
+}
