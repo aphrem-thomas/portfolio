@@ -20,7 +20,11 @@
 }
 
 .intro-wrapper{
+    display: flex;
+}
 
+.wishing{
+    
 }
 
 .hi{
