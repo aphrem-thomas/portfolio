@@ -4,6 +4,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="container">
+                <a href="#about-page">about</a>
             </div>
         );
     }
