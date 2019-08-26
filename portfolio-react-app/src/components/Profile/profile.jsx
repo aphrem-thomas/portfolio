@@ -14,7 +14,7 @@ class Profile extends React.Component {
         return (
             <div className={"wrapper"}>
                <Intro/>
-              {resumeVisible && <About/>}
+               <About/>
             </div>
         );
     }
