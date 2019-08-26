@@ -10,8 +10,6 @@ class Content extends React.Component{
             <React.Fragment>
                 <Switch>
                     <Route exact path="/" component={Profile}/>
-                    <Route exact path="/typing" component={Typing}/>
-                    <Route exact path="/triangle" component={Triangle}/>
                 </Switch>
             </React.Fragment>
         );

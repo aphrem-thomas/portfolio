@@ -10,6 +10,9 @@ const Intro = () => {
                     <div className="hi">Hi</div>
                     <div className="aphremName">Aphrèm</div>
                 </div>
+                <div className ="arrow">
+                    <span className ="rightArrow">{">"}</span>
+                </div>
             </div>
         </div>
     );
