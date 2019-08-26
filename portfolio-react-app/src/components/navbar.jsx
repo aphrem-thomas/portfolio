@@ -8,7 +8,7 @@ class NavBar extends React.Component {
                 <div className="navbar-section">
                     <a className="link" href="#home-page">home</a>
                     <a className="link" href="#about-page">about</a>
-                    <a className="link" href="#about-page">skills</a>
+                    <a className="link" href="#skills-page">skills</a>
                 </div>
             </div>
         );

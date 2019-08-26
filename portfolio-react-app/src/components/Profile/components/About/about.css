@@ -1,5 +1,13 @@
 .about-wrapper{
     height: 100vh;
     width: 100%;
-    background-color: purple;
+    background-color:#000;
+}
+
+.side-info{
+    position: sticky;
+    top:20px;
+    height: 100%;
+    background-color: #FFF;
+    width:500px;
 }
