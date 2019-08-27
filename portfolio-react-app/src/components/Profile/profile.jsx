@@ -17,7 +17,7 @@ class Profile extends React.Component {
             <div className={"wrapper"}>
                <Intro/>
                <About/>
-               {/* <Skills/> */}
+               <Skills/>
             </div>
         );
     }

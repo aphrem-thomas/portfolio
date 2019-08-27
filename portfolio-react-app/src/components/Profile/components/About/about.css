@@ -1,13 +1,44 @@
 .about-wrapper{
     height: 100vh;
     width: 100%;
-    background-color:#000;
+    display: flex;
 }
 
 .side-info{
-    position: sticky;
-    top:20px;
     height: 100%;
-    background-color: #FFF;
+    background-color:#000;
     width:500px;
+    display: flex;
+}
+
+.about-photo{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.about-photo-greenbg{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.right-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text{
+    height: 400px;
+    width:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-info{
+    color: #FFF;
+    text-align: justify;
+    font-style: italic;
 }
