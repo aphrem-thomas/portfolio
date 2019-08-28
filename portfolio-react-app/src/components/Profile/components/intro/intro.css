@@ -1,30 +1,74 @@
 .profilePhoto{
-    flex:1;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    
 }
 
 .profilePhoto img {
     max-width: 100%;
     max-height: 100%;
+    z-index: 45;
+    position: absolute;
+    left: 15px;
 }
 
 .intro{
-    flex: 1 1;
+    width:100%;
     color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Lobster';
 }
 
+.intro-webDev{
+    position: absolute;
+    color: blue;
+    transform: rotate(-90deg);
+    width: 100vh;
+    height: 80px;
+    font-size: 80px;
+    bottom: -80px;
+    transform-origin: top left;
+    display: flex;
+    justify-content: center;
+    font-family: 'Righteous', cursive;
+}
+
+.intro-webDev::after{
+    content: '';
+    width: 31px;
+    height: 10px;
+    background: blue;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(-20px);
+    -webkit-animation: CURSOR 1s infinite;
+    -moz-animation: CURSOR 1s infinite;
+    -o-animation: CURSOR 1s infinite;
+    animation: CURSOR 1s infinite; 
+}
+
 .intro-wrapper{
     display: flex;
+    height: 100vh;
+}
+
+.intro-info{
+    height: 200px;
+    padding: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    font-family: 'Righteous', cursive;
+    color: cyan;
 }
 
 .wishing{
-    
+    width: 100%
 }
 
 .hi{
@@ -42,3 +86,12 @@
     font-family: 'Caveat Brush','Open Sans';
     font-size: 135px;
 }
+
+@keyframes CURSOR {
+    0%, 49% {
+      background-color:transparent;
+    }
+    50%, 100% {
+      background-color: blue;
+    }
+  }
