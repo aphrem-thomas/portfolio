@@ -1,0 +1,19 @@
+.profile-card-wrapper{
+    position:sticky;
+    top:12.5vh;
+    height:75vh;
+    width:300px;
+    background-color: #FFF;
+}
+
+.profile-card-photo{
+    height: 400px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.profile-card-photo-image{
+    object-fit: contain;
+    height: 400px;
+    width: 300px;
+}

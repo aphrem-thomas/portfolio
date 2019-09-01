@@ -38,8 +38,8 @@
 
 .intro-webDev::after{
     content: '';
-    width: 2rem;
-    height: .6rem;
+    width: 10vh;
+    height: 2vh;
     background: #898990;
     transform: translateY(-10px);
     animation: CURSOR 1s infinite; 
