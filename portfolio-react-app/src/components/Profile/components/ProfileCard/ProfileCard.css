@@ -5,6 +5,7 @@
     width: 300px;
     background-color: #252323;
     flex-shrink: 0;
+    /* box-shadow: 5px 10px 3px #fff; */
 }
 
 .profile-card-photo{
