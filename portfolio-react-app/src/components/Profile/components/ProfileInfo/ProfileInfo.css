@@ -1,0 +1,12 @@
+.profileInfo-wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profileInfo-content{
+    
+}
