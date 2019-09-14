@@ -1,6 +1,6 @@
 .profileInfo-wrapper{
     height: 100vh;
-    width: calc(100% - 400px);
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,5 +8,5 @@
 }
 
 .profileInfo-content{
-    
+    color:white;
 }

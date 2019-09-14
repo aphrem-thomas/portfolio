@@ -5,14 +5,15 @@ import Skills from '../Skills/skills';
 import ProfileCard from '../ProfileCard/ProfileCard';
 import ProfileInfo from '../ProfileInfo/ProfileInfo';
 
-const About = ()=>{
-    return(
-            <div id="about-page" className="about-wrapper">
-                <ProfileCard/>
-                <ProfileInfo/>
-                <span className="about-info">
-                </span>
+const About = () => {
+    return (
+        <div id="about-page" className="about-wrapper">
+            <ProfileCard />
+            <div className="about-info">
+                <ProfileInfo />
+                <Skills />
             </div>
+        </div>
     );
 }
 
