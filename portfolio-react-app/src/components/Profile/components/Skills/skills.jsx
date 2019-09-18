@@ -10,9 +10,9 @@ const Skills = () => {
     return (
         <div id="skills-page" className="skills-wrapper">
           <h1>Skills</h1>
-          <div className="skill-info">
+          <div className="skills-info">
            <div className="skills-indiv">
-             <LangSkill name="React JS" logo={reactLogo} value={80}/>
+             <LangSkill name="React JS" logo={reactLogo} value={80} color={'green'}/>
            </div>
           </div>
         </div>

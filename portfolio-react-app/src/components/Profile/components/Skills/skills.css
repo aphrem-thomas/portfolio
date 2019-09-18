@@ -1,4 +1,18 @@
 .skills-wrapper{
     height: 100vh;
     width:100%;
+    color:white;
+}
+
+.skills-info{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+/* this will keep the height of the div same as its width as width is changing(% value) */
+.skills-indiv{
+    width:25%;
+    height: 200px;
+    overflow: hidden;
 }
