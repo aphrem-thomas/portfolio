@@ -12,8 +12,14 @@ const Skills = () => {
           <h1>Skills</h1>
           <div className="skills-info">
            <div className="skills-indiv">
-             <LangSkill name="React JS" logo={reactLogo} value={80} color={'green'}/>
+             <LangSkill name="React JS" logo={reactLogo} value={90} color={'green'}/>
            </div>
+           <div className="skills-indiv">
+           <LangSkill name="Javascript" logo={js} value={90} color={'green'}/>
+           </div>
+           <div className="skills-indiv">
+            <LangSkill name="Node JS" logo={node} value={70} color={'blue'}/>
+            </div>
           </div>
         </div>
     );
