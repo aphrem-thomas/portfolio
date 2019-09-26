@@ -8,11 +8,12 @@
     flex-shrink: 0;
     border-radius: 10px;
     border: 1px solid #24cbe6;
+    font-family: 'Roboto';
     /* box-shadow: 5px 10px 3px #fff;*/
 }
 
 .profile-card-photo{
-    height: 50%;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,4 +24,37 @@
     height: 180px;
     width: 180px;
     border-radius: 90px;
+}
+
+.profile-card-info{
+    color:white;
+
+}
+
+.github{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github h3{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.github-logo{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    background: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.resume h3{
+    cursor: pointer;
+}
+
+.profile-card-experience{
+
 }
