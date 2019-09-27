@@ -22,7 +22,7 @@ export default function ProfileCard() {
                     <h3>github</h3>
                 </div>
                 </a>
-                <a href="https://drive.google.com/file/d/1Bx8gHn77s1wnBzbEkfyteMXM2kXJRl6t/view?usp=sharing" download>
+                <a href="https://drive.google.com/file/d/1Bx8gHn77s1wnBzbEkfyteMXM2kXJRl6t/view?usp=sharing" download target="_blank">
                     <div className="resume">
                         <h3>resumé...</h3>
                     </div>
